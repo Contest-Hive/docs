@@ -1,3 +1,48 @@
-# Toph
+# Hackerearth Contests
 
-Hello from the other side
+## Request
+
+Make a GET request to [`/api/hackerearth`](https://contest-hive.vercel.app/api/hackerearth) or [`/api/4`](https://contest-hive.vercel.app/api/4) to get a list of all upcoming Hackerearth contests.
+
+## Response
+
+```json copy
+{
+  "ok": true,
+  "data": [
+    {
+      "title": "Example Contest of HackerEarth 1",
+      "url": "https://www.hackerearth.com/challenges/example-contest",
+      "startTime": "2023-12-16T09:41:50Z",
+      "endTime": "2023-12-16T10:41:50Z",
+      "duration": 3600,
+      "platform": "HackerEarth"
+    },
+    {
+      "title": "Example Contest of HackerEarth 2",
+      "url": "https://www.hackerearth.com/challenges/example-contest",
+      "startTime": "2023-12-16T09:41:50Z",
+      "endTime": "2023-12-16T11:41:50Z",
+      "duration": 7200,
+      "platform": "HackerEarth"
+    }
+  ],
+  "lastUpdated": "2023-12-16T09:41:50Z"
+}
+```
+
+<details>
+    <summary>Response Details</summary>
+
+| Property    | Type   | Description                                        |
+| ----------- | ------ | -------------------------------------------------- |
+| ok          | bool   | Whether the request was successful - true or false |
+| data        | array  | Data returned from the API (list of contests)      |
+| title       | string | Title of the contest                               |
+| url         | string | Url of the contest                                 |
+| startTime   | string | Start time of the contest in UTC ISO 8601 format   |
+| endTime     | string | End time of the contest in UTC ISO 8601 format     |
+| duration    | int    | Duration of the contest in seconds                 |
+| lastUpdated | string | Last time the data was updated                     |
+
+</details>

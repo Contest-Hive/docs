@@ -1,3 +1,48 @@
-# Toph
+# Codechef Contests
 
-Hello from the other side
+## Request
+
+Make a GET request to [`/api/codechef`](https://contest-hive.vercel.app/api/codechef) or [`/api/2`](https://contest-hive.vercel.app/api/2) to get a list of all upcoming Codechef contests.
+
+## Response
+
+```json copy
+{
+  "ok": true,
+  "data": [
+    {
+      "title": "Example Contest of CodeChef 1",
+      "url": "https://www.codechef.com/contests/example-contest",
+      "startTime": "2023-12-16T09:37:32Z",
+      "endTime": "2023-12-16T10:37:32Z",
+      "duration": 3600,
+      "platform": "CodeChef"
+    },
+    {
+      "title": "Example Contest of CodeChef 2",
+      "url": "https://www.codechef.com/contests/example-contest",
+      "startTime": "2023-12-16T09:37:32Z",
+      "endTime": "2023-12-16T11:37:32Z",
+      "duration": 7200,
+      "platform": "CodeChef"
+    }
+  ],
+  "lastUpdated": "2023-12-16T09:37:32Z"
+}
+```
+
+<details>
+    <summary>Response Details</summary>
+
+| Property    | Type   | Description                                        |
+| ----------- | ------ | -------------------------------------------------- |
+| ok          | bool   | Whether the request was successful - true or false |
+| data        | array  | Data returned from the API (list of contests)      |
+| title       | string | Title of the contest                               |
+| url         | string | Url of the contest                                 |
+| startTime   | string | Start time of the contest in UTC ISO 8601 format   |
+| endTime     | string | End time of the contest in UTC ISO 8601 format     |
+| duration    | int    | Duration of the contest in seconds                 |
+| lastUpdated | string | Last time the data was updated                     |
+
+</details>

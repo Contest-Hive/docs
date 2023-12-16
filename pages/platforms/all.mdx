@@ -1,0 +1,58 @@
+# All Contests
+
+## Request
+
+Make a GET request to [`/api/all`](https://contest-hive.vercel.app/api/all) or [`/api/all`](https://contest-hive.vercel.app/api/all) to get a list of all upcoming contests.
+
+## Response
+
+```json copy
+{
+  "ok": true,
+  "data": {
+    "atcoder": [
+      {
+        "title": "Example Contest of Atcoder 1",
+        "url": "https://atcoder.jp/contests/example-contest",
+        "startTime": "2023-12-16T09:43:37Z",
+        "endTime": "2023-12-16T10:43:37Z",
+        "duration": 3600,
+        "platform": "Atcoder"
+      }
+    ],
+    "codechef": [],
+    "codeforces": [],
+    "codeforces-gym": [],
+    "hackerearth": [
+      {
+        "title": "Example Contest of HackerEarth 1",
+        "url": "https://www.hackerearth.com/challenges/example-contest",
+        "startTime": "2023-12-16T09:43:37Z",
+        "endTime": "2023-12-16T10:43:37Z",
+        "duration": 3600,
+        "platform": "HackerEarth"
+      }
+    ],
+    "hackerrank": [],
+    "leetcode": [],
+    "toph": []
+  },
+  "lastUpdated": "2023-12-16T09:43:37Z"
+}
+```
+
+<details>
+    <summary>Response Details</summary>
+
+| Property    | Type   | Description                                        |
+| ----------- | ------ | -------------------------------------------------- |
+| ok          | bool   | Whether the request was successful - true or false |
+| data        | array  | Data returned from the API (list of contests)      |
+| title       | string | Title of the contest                               |
+| url         | string | Url of the contest                                 |
+| startTime   | string | Start time of the contest in UTC ISO 8601 format   |
+| endTime     | string | End time of the contest in UTC ISO 8601 format     |
+| duration    | int    | Duration of the contest in seconds                 |
+| lastUpdated | string | Last time the data was updated                     |
+
+</details>

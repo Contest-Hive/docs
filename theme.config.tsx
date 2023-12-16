@@ -7,11 +7,11 @@ const config: DocsThemeConfig = {
     link: "https://github.com/Contest-Hive/Contest-Hive",
   },
   chat: {
-    link: "https://discord.com",
+    link: "https://discordid.netlify.app/?id=804035616420397086",
   },
   docsRepositoryBase: "https://github.com/Contest-Hive/docs/tree/main/",
   footer: {
-    text: "MIT 2023-24 © Contest Hive",
+    text: "© Contest Hive 2023 - All rights reserved.",
   },
 }
 

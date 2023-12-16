@@ -1,3 +1,48 @@
-# Toph
+# Atcoder Contests
 
-Hello from the other side
+## Request
+
+Make a GET request to [`/api/atcoder`](https://contest-hive.vercel.app/api/atcoder) or [`/api/1`](https://contest-hive.vercel.app/api/1) to get a list of all upcoming Atcoder contests.
+
+## Response
+
+```json copy
+{
+  "ok": true,
+  "data": [
+    {
+      "title": "Example Contest of Atcoder 1",
+      "url": "https://atcoder.jp/contests/example-contest",
+      "startTime": "2023-12-16T09:19:47Z",
+      "endTime": "2023-12-16T10:19:47Z",
+      "duration": 3600,
+      "platform": "Atcoder"
+    },
+    {
+      "title": "Example Contest of Atcoder 2",
+      "url": "https://atcoder.jp/contests/example-contest",
+      "startTime": "2023-12-16T09:19:47Z",
+      "endTime": "2023-12-16T11:19:47Z",
+      "duration": 7200,
+      "platform": "Atcoder"
+    }
+  ],
+  "lastUpdated": "2023-12-16T09:19:47Z"
+}
+```
+
+<details>
+    <summary>Response Details</summary>
+
+| Property    | Type   | Description                                        |
+| ----------- | ------ | -------------------------------------------------- |
+| ok          | bool   | Whether the request was successful - true or false |
+| data        | array  | Data returned from the API (list of contests)      |
+| title       | string | Title of the contest                               |
+| url         | string | Url of the contest                                 |
+| startTime   | string | Start time of the contest in UTC ISO 8601 format   |
+| endTime     | string | End time of the contest in UTC ISO 8601 format     |
+| duration    | int    | Duration of the contest in seconds                 |
+| lastUpdated | string | Last time the data was updated                     |
+
+</details>
