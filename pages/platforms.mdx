@@ -1,0 +1,42 @@
+# Get Contest Details
+
+## Request Format
+
+`contest-hive.vercel.app/api/<platform-name>`
+
+Replace `<platform-name>` with the name of the platform you want
+
+## Response
+
+```json
+{
+  "ok": true,
+  "data": [
+    {
+      "title": "Codeforces Round #702 (Div. 3)",
+      "url": "https://codeforces.com/contests/1490",
+      "startTime": "2021-01-17T17:35:00.000Z",
+      "endTime": "2021-01-17T19:05:00.000Z",
+      "duration": 5400
+    },
+    {
+      "title": "Codeforces Round #701 (Div. 2)",
+      "url": "https://codeforces.com/contests/1487",
+      "startTime": "2021-01-16T17:35:00.000Z",
+      "endTime": "2021-01-16T19:35:00.000Z",
+      "duration": 7200
+    }
+  ]
+}
+```
+
+| Property    | Type   | Description                                        |
+| ----------- | ------ | -------------------------------------------------- |
+| ok          | bool   | Whether the request was successful - true or false |
+| data        | array  | Data returned from the API (list of contests)      |
+| title       | string | Title of the contest                               |
+| url         | string | Url of the contest                                 |
+| startTime   | string | Start time of the contest in UTC ISO 8601 format   |
+| endTime     | string | End time of the contest in UTC ISO 8601 format     |
+| duration    | int    | Duration of the contest in seconds                 |
+| lastUpdated | string | Last time the data was updated                     |
